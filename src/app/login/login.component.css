@@ -1,0 +1,7 @@
+@media (max-width: 576px) {
+
+    .login-box{
+        width: calc(100vw - 70px);
+    }
+
+}
