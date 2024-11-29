@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { WeatherComponent } from './weather/weather.component';
+import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,10 @@ export const routes: Routes = [
             {
                 path: "weather",
                 component: WeatherComponent
+            },
+            {
+                path: "mahasiswa",
+                component: MahasiswaComponent
             }
         ]
     },
