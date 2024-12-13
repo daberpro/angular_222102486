@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
+import { otentikasiGuard } from './otentikasi.guard';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {
         path: "admin",
         component: AdminComponent,
+        canActivate: [otentikasiGuard],
         children: [
             {
                 path: "main-dashboard",

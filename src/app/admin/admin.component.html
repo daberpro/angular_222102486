@@ -8,7 +8,7 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="index3.html" class="nav-link">Home</a>
+          <a routerLink="/admin/main-dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" href="#" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Contact</a>
@@ -134,6 +134,12 @@
             <i class="fas fa-th-large"></i>
           </a>
         </li>
+        <li class="nav-item">
+          <button (click)="ShowWarningLogout('Apakah anda yakin akan keluar?')" class="btn btn-primary" >
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+          </button>
+        </li>
       </ul>
     </nav>
     <!-- /.navbar -->
@@ -166,3 +172,24 @@
       </div>
     </footer>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="logoutModalLabel">Peringatan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span >&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span id="message"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="LogOut()">Logout</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+      </div>
+    </div>
+  </div>
+</div>

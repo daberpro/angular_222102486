@@ -44,11 +44,15 @@ export class MahasiswaComponent implements AfterViewInit {
     .then(d => d.text())
     .then(d =>{
       this.getData();
+
+      //@ts-ignore
+      console.log(`${d.status}: ${d.message}`);
       //@ts-ignore
       $("#exampleModal").modal("hide");
       console.log("success to add data");
     })
     .catch(d =>{
+      console.log(d);
       alert("Gagal menambahkan data");
     });
 
