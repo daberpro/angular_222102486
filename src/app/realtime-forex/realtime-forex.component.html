@@ -1,0 +1,54 @@
+<style>
+    .mcontainer{
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .labels{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    .labels p {
+        margin: 0px;
+        padding: 0px;
+    }
+
+</style>
+<div style="padding: 20px;">
+    <table id="table_id" class="display table">
+        <thead>
+            <tr id="table_columns">
+                <th>id</th>	
+                <th>rank</th>	
+                <th>symbol</th>	
+                <th>name</th>	
+                <th>supply</th>	
+                <th>maxSupply</th>
+            </tr>
+        </thead>
+    </table>
+    <h1 class="subtitle mt-5 mb-4">Prices</h1>
+    <div class="mcontainer">
+        @for(p of data_label; track p){
+            <div class="labels">
+                <p>{{p}}</p>
+                <b>{{data[p]}}</b>
+            </div>
+        }
+    </div>
+</div>

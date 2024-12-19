@@ -1,0 +1,95 @@
+<div style="padding: 20px;">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <i class="fas fa-plus mr-2"></i>
+                        Mahasiswa baru
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Nim</label>
+                            <input type="text" name="Nim" class="form-control">
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Nama</label>
+                            <input type="text" name="Nama" class="form-control">
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Alamat</label>
+                            <input type="text" name="Alamat" class="form-control">
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Jenis Kelamin</label>
+                            <select name="JenisKelamin" class="form-control">
+                                <option value="Laki Laki">Laki Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Tempat Lahir</label>
+                            <input type="text" name="TempatLahir" class="form-control">
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Tanggal Lahir</label>
+                            <input type="date" name="TanggalLahir" class="form-control">
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>JP</label>
+                            <select name="JP" class="form-control">
+                                <option value="TI/TI">TI/TI</option>
+                                <option value="SI/SI">SI/SI</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Status Pernikahan</label>
+                            <select name="StatusPernikahan" class="form-control">
+                                <option value="Belum Menikah">Belum Menikah</option>
+                                <option value="Menikah">Menikah</option>
+                                <option value="Duda">Duda</option>
+                                <option value="Janda">Janda</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <label>Tahun Masuk</label>
+                            <input value="2024" type="number" name="TahunMasuk" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" (click)="Add()" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Ari Susanto</h1>
+    <h2>222102486</h2>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary mt-2 mb-4" data-toggle="modal" data-target="#exampleModal">
+        Tambah Data
+    </button>
+    <table id="table_id" class="display table">
+        <thead>
+            <tr id="table_columns">
+                <th>Alamat</th>
+                <th>JenisKelamin</th>
+                <th>JP</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>StatusNikah</th>
+                <th>TahunMasuk</th>
+                <th>TanggalLahir</th>
+                <th>TempatLahir</th>
+            </tr>
+        </thead>
+    </table>
+</div>
