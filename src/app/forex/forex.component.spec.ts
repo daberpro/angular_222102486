@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RealtimeForexComponent } from './realtime-forex.component';
+import { ForexComponent } from './forex.component';
 
-describe('RealtimeForexComponent', () => {
-  let component: RealtimeForexComponent;
-  let fixture: ComponentFixture<RealtimeForexComponent>;
+describe('ForexComponent', () => {
+  let component: ForexComponent;
+  let fixture: ComponentFixture<ForexComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RealtimeForexComponent]
+      imports: [ForexComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RealtimeForexComponent);
+    fixture = TestBed.createComponent(ForexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

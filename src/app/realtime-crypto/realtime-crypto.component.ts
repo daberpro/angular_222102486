@@ -6,10 +6,10 @@ import 'datatables.net-responsive-dt';
   selector: 'app-realtime-forex',
   standalone: true,
   imports: [],
-  templateUrl: './realtime-forex.component.html',
-  styleUrl: './realtime-forex.component.css'
+  templateUrl: './realtime-crypto.component.html',
+  styleUrl: './realtime-crypto.component.css'
 })
-export class RealtimeForexComponent implements AfterViewInit {
+export class RealtimeCryptoComponent implements AfterViewInit {
 
   table: any;
   data_label: any;
@@ -19,6 +19,19 @@ export class RealtimeForexComponent implements AfterViewInit {
     this.data_label = [];
     this.data = {};
   }
+
+  formatNumberWithDollar(number: number) {
+    let formatting_options = {
+       style: 'currency',
+       currency: 'USD',
+       minimumFractionDigits: 3,
+    }
+    // users can see how locale passed as a parameter.
+    //@ts-ignore
+    let dollarString = new Intl.NumberFormat("en-US", formatting_options);
+    let finalString = dollarString.format(number);
+    return finalString;
+ }
 
   async getData(): Promise<void>{
 
@@ -36,11 +49,11 @@ export class RealtimeForexComponent implements AfterViewInit {
     }
     this.table.draw(false);
 
-    const ws = new WebSocket(`ws://ws.coincap.io/prices?assets=${labels.join(",")}`);
+    const ws = new WebSocket(`wss://ws.coincap.io/prices?assets=${labels.join(",")}`);
     ws.onmessage = ({data}) =>{
       let update_data = JSON.parse(data);
       this.data = {...this.data,...update_data};
-      this.data_label = Object.keys(this.data);
+      this.data_label = Object.entries(this.data);
     };
 
   }

@@ -5,7 +5,8 @@ import { MainDashboardComponent } from './main-dashboard/main-dashboard.componen
 import { WeatherComponent } from './weather/weather.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 import { otentikasiGuard } from './otentikasi.guard';
-import { RealtimeForexComponent } from './realtime-forex/realtime-forex.component';
+import { RealtimeCryptoComponent } from './realtime-crypto/realtime-crypto.component';
+import { ForexComponent } from './forex/forex.component';
 
 export const routes: Routes = [
     {
@@ -34,8 +35,12 @@ export const routes: Routes = [
                 component: MahasiswaComponent
             },
             {
-                path: "realtime-forex",
-                component: RealtimeForexComponent
+                path: "realtime-crypto",
+                component: RealtimeCryptoComponent
+            },
+            {
+                path: "forex",
+                component: ForexComponent
             }
         ]
     },

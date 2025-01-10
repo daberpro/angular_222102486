@@ -21,11 +21,13 @@
         align-items: center;
         gap: 10px;
         background-color: rgba(0,0,0,0.25);
+        flex-wrap: wrap;
     }
 
-    .labels p {
+    .labels p,b {
         margin: 0px;
         padding: 0px;
+        width: 100%;
     }
 
 </style>
@@ -44,10 +46,10 @@
     </table>
     <h1 class="subtitle mt-5 mb-4">Prices</h1>
     <div class="mcontainer">
-        @for(p of data_label; track p){
+        @for(p of data_label; track p[0]){
             <div class="labels">
-                <p>{{p}}</p>
-                <b>{{data[p]}}</b>
+                <p>{{p[0]}}</p>
+                <b style="font-size: 1.5rem;font-weight: 900;">{{formatNumberWithDollar(p[1])}}</b>
             </div>
         }
     </div>
